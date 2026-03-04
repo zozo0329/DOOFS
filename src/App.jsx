@@ -1,9 +1,12 @@
 import React from "react";
+import HeaderMain from "./Components/Header/HeaderMain/HeaderMain";
+import MainContent from "./Components/Main/MainContent/MainContent";
 
 function App() {
   return (
     <>
-      <h1>Hello World</h1>
+      <HeaderMain />
+      <MainContent />
     </>
   );
 }
