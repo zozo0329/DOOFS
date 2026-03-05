@@ -36,14 +36,16 @@ const SlideItem = () => {
                 <button
                   type="button"
                   onClick={() => setActive(prevIndex)}
-                  className="btn btn-circle"
+                  className="btn btn-circle transi
+                  on-all duration-200 hover:bg-[#e0e0e0] hover:scale-[1.1]"
                 >
                   ❮
                 </button>
                 <button
                   type="button"
                   onClick={() => setActive(nextIndex)}
-                  className="btn btn-circle"
+                  className="btn btn-circle transi
+                  on-all duration-200 hover:bg-[#e0e0e0] hover:scale-[1.1]"
                 >
                   ❯
                 </button>
