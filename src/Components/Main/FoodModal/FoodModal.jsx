@@ -17,7 +17,7 @@ const FoodModal = ({ item }) => {
           <img
             src={AddIcon}
             alt="Add Icon"
-            className="h-10 absolute bottom-0 right-2 top-30 z-10 hover:scale-110 transition-all duration-300 cursor-pointer"
+            className="h-10 absolute bottom-0 right-2 top-30 z-10 hover:scale-110 transition-all duration-300 cursor-pointer rounded-full"
           />
         </div>
       </div>

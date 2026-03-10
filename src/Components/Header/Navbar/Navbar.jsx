@@ -10,7 +10,7 @@ const Navbar = () => {
         Login
       </Button>
       <Button
-        className={`hover:bg-[#eeeeee] hover:text-[#bb7900] transition-all duration-250 hover:scale-[1.1]`}
+        className={`hover:bg-[#c9c9c9] hover:text-[#ad7100] transition-all duration-250 hover:scale-[1.1]`}
       >
         Sign Up For Free Delivery
       </Button>
