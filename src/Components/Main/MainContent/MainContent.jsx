@@ -3,7 +3,7 @@ import React from "react";
 import SlideItem from "../SlideItems/SlideItem";
 import ItemModal from "../../UI/Modal/ItemModal/ItemModal";
 import FoodModal from "../FoodModal/FoodModal";
-import FoodData from "../Data/FoodData";
+import FoodData from "../../../Other/Data/FoodData";
 import OrderSummary from "../OrderSummary/OrderSummary";
 const MainContent = () => {
   return (

@@ -4,11 +4,11 @@ import Button from "../../../UI/Buttons/Button";
 const SummaryAction = () => {
   return (
     <>
-      <div className="flex flex-col gap-5">
+      <div className="flex flex-col gap-5 pt-5">
        <div>
          <div className="flex justify-between">
-          <p>Total:</p>
-          <p>$0.00</p>
+          <p className="text-lg font-bold">Total:</p>
+          <p className="text-lg font-bold">₱0.00</p>
         </div>  
         <div>
           <a href="#" className="hover:underline">
@@ -16,7 +16,7 @@ const SummaryAction = () => {
           </a>
         </div>
        </div>
-          <Button className="w-full">Order</Button>
+          <Button className="w-full text-[20px] font-bold hover:bg-[#a04800] hover:text-white transition-all duration-350 hover:border-0">Order</Button>
       </div>
     </>
   );
