@@ -12,18 +12,22 @@ const MainContent = () => {
 
       <div className="flex flex-row justify-center items-start ">
         <div>
-          <div className="flex flex-col gap-5 items-center justify-center">
-            
-            <div className="p-5 flex flex-wrap gap-5 items-center">
-              {FoodData.map((item) => (
-                <ItemModal>
-                  <FoodModal item={item} />
-                </ItemModal>
-              ))}
+          {FoodData.map((category) => (
+            <div key={category.id} className="flex flex-col gap-4 items-center justify-center pt-10">
+              <div>
+                <h1 className="text-5xl font-bold text-[#be4600]">{category.Category}</h1>
+              </div>
+              <div className="p-5 flex flex-wrap gap-5 items-center">
+                {category.FoodItem.map((item) => (
+                  <ItemModal key={item.id}>
+                    <FoodModal item={item} />
+                  </ItemModal>
+                ))}
+              </div>
             </div>
-          </div>
+          ))}
         </div>
-        <div className="p-5 sticky top-9 z-50">
+        <div className="p-5 sticky top-12 z-50">
           <OrderSummary />
         </div>
       </div>
