@@ -20,7 +20,7 @@ const MainContent = () => {
               </div>
               <div className="p-5 flex flex-wrap gap-5 items-center">
                 {category.FoodItem.map((item) => (
-                  <ItemModal key={item.id} content={<Products item={item} />}>
+                  <ItemModal key={item.id} item={item} content={<Products item={item}/>}>
                     <FoodModal item={item} />
                   </ItemModal>
                 ))}
