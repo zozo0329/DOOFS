@@ -1,21 +1,27 @@
+// DISHES
 const FriedFoods = [
   {
     name: "Fried Chicken",
+    price: "₱250",
     description:
       "8 pcs of crispy fried chicken,  Served with a side of tangy dipping sauce.",
     Image:
       "https://www.skilledcooks.com/wp-content/uploads/2023/11/cocinar0716_httpss.mj_.run68mX-wV7A38_Amateur_photo_from_faceb_f1607ba9-9c73-4220-ab8a-5b6aec5cf571_3.png",
     id: "FriedModal1",
+  
   },
   {
     name: "Fried Lumpia",
+    price: "₱150",
     description: "25 pcs of Fried Lumpia,  Served with a dipping sauce.",
     Image:
       "https://thebrilliantkitchen.com/wp-content/uploads/2022/08/Egg-Rolls.jpg",
     id: "FriedModal2",
+   
   },
   {
     name: "Fried Bangus",
+    price: "₱300",
     description: "4 pcs of Fried Bangus,  Served with a side of Soy sauce.",
     Image:
       "https://cdn.tastephilippines.com/wp-content/uploads/2022/10/golden-brown-fried-bangus-from-the-Philippines-768x768.jpg?strip=all&lossy=1&ssl=1",
@@ -23,6 +29,7 @@ const FriedFoods = [
   },
   {
     name: "Lechon Kawali",
+    price: "₱450",
     description: "Good for 4 people,  Served with a side of Vinegar and Chili.",
     Image:
       "https://www.seriouseats.com/thmb/UlhzxqvVs8whAL-HsPK1ZvQMjj8=/1500x1125/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__images__2015__01__20150102-lechon-kawali-first-finished-joshua-bousel-ad06cbac80af4886a6183f9041a61d9e.jpg",
@@ -30,6 +37,7 @@ const FriedFoods = [
   },
   {
     name: "Crispy Pata",
+    price: "₱500",
     description: "Good for 4 people,  Served with a side of Vinegar and Chili.",
     Image:
       "https://i.pinimg.com/736x/18/2f/4b/182f4b5f937cf960f6ebb23aab41d3fd.jpg",
@@ -53,6 +61,8 @@ const PastaFoods = [{
   Image: "https://ameessavorydish.com/wp-content/uploads/2011/03/Baked-mac-and-cheese-feature.jpg",
   id: "PastaModal4"},
 ];
+
+// ADD ONS
 const FoodData = [
   {Category: "Fried Foods", FoodItem: FriedFoods , id: "FriedFoods01"},
   {Category: "Pasta Dishes", FoodItem: PastaFoods , id: "PastaFoods01"},

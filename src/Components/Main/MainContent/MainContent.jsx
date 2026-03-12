@@ -5,6 +5,7 @@ import ItemModal from "../../UI/Modal/ItemModal/ItemModal";
 import FoodModal from "../FoodModal/FoodModal";
 import FoodData from "../../../Other/Data/FoodData";
 import OrderSummary from "../OrderSummary/OrderSummary";
+import Products from "../Products/Products";
 const MainContent = () => {
   return (
     <div>
@@ -19,7 +20,7 @@ const MainContent = () => {
               </div>
               <div className="p-5 flex flex-wrap gap-5 items-center">
                 {category.FoodItem.map((item) => (
-                  <ItemModal key={item.id}>
+                  <ItemModal key={item.id} content={<Products item={item} />}>
                     <FoodModal item={item} />
                   </ItemModal>
                 ))}
