@@ -1,29 +1,28 @@
 import React from 'react'
-
+import ProductsAction from './ProductsAction/ProductsAction'
+import Button from '../../UI/Buttons/Button'
+import BuyProduct from './ProductsAction/BuyProduct'
 const Products = () => {
   return (
     <div>
        <div>
-        <img src="#" alt="IMAGE" />
+        <img src="https://lakegenevacountrymeats.com/wp-content/uploads/Fried-Chicken-Pieces-1.jpg" alt="IMAGE" />
        </div>
-       <div>
-        <h1>NAME</h1>
-        <p>DESCRIPTION</p>
-        <p>PRICE</p>
+       <div className="flex flex-col gap-2 p-4  overflow-hidden">
+        <h1 className='text-[19px] font-semibold'>NAME</h1>
+        <p>Description</p>
+        <p className='text-xl font-bold'>₱100.79</p>
+        <div className='mt-10'>
+          <h1 className='text-[19px] font-semibold text-center'>Add ons {"(Optional)"}</h1>
+          <ProductsAction/>
+          <ProductsAction/>
+          <ProductsAction/>
+          <ProductsAction/>
+        </div>
        </div>
-       <div>
-        <h1>Add ons {"(Optional)"}</h1>
-      <div>
-          <h1>Name</h1>
-            <span className="flex items-center">
-              <span className="mr-2">+P</span>
-              <input
-                type="checkbox"
-                className="form-checkbox h-4 w-4 text-orange-600"
-              />
-            </span>
-      </div>
-       </div>
+        <div className='flex items-center justify-center sticky bottom-0'>
+        <BuyProduct/>
+        </div>
 
     </div>
   )
