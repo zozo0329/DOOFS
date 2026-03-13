@@ -1,7 +1,7 @@
 import React from 'react'
 
-const ProductsAction = () => {
-
+const ProductsAction = ({name, price}) => {
+  console.log(name, price, "PROD ACTION")
 
   return (
      <div>
@@ -9,9 +9,9 @@ const ProductsAction = () => {
       <div className='flex items-center justify-between'>
           {/* clickable row label with space between name and the rest */}
             <label className="flex items-center justify-between cursor-pointer w-full hover:bg-[#dbdbdb] p-2 transition-all duration-200 rounded-[10px]">
-              <span className="text-md font-semibold">name</span>
+              <span className="text-md font-semibold">{name}</span>
               <span className="flex items-center space-x-2">
-                <span className="text-lg font-bold">₱100</span>
+                <span className="text-lg font-bold">  {price ? <>₱{price}</> : "Free"}</span>
                 <input
                   type="checkbox"
                   className="form-checkbox h-4 w-4 accent-black"
