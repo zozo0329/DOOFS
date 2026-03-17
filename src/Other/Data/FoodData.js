@@ -24,6 +24,17 @@ id: "TomatoKetchupAddOn1",
 price: 0,
 id: "BananaKetchupAddOn1", 
 },]
+const FriedBangusAddOn = [{name: "Soy Sauce with calamansi", price: 0, id: "SoySauceAddOn1"},
+{name: "Vinegar with chili", price: 0, id: "VinegarAddOn1"},];
+const LechonKawaliAddOn = [{name:"Gravy", price: 10, id: "Gravy01"},
+{name: "Vinegar with chili", price: 0, id: "VinegarAddOn1"},
+{name: "Soy Sauce with calamansi", price: 0, id: "SoySauceAddOn1"},
+
+];
+const CrispyPataAddOn = [{name:"Gravy", price: 10, id: "Gravy01"},
+{name: "Soy Sauce with calamansi", price: 0, id: "SoySauceAddOn1"},
+{name: "Vinegar with chili", price: 0, id: "VinegarAddOn1"},
+]; 
 
 // DISHES
 const FriedFoods = [
@@ -53,7 +64,7 @@ const FriedFoods = [
     Image:
       "https://cdn.tastephilippines.com/wp-content/uploads/2022/10/golden-brown-fried-bangus-from-the-Philippines-768x768.jpg?strip=all&lossy=1&ssl=1",
     id: "FriedModal3",
-    addOns: [],
+    addOns: FriedBangusAddOn,
   },
   {
     name: "Lechon Kawali",
@@ -62,7 +73,7 @@ const FriedFoods = [
     Image:
       "https://www.seriouseats.com/thmb/UlhzxqvVs8whAL-HsPK1ZvQMjj8=/1500x1125/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__images__2015__01__20150102-lechon-kawali-first-finished-joshua-bousel-ad06cbac80af4886a6183f9041a61d9e.jpg",
     id: "FriedModal4",
-    addOns: [],
+    addOns: LechonKawaliAddOn,
   },
   {
     name: "Crispy Pata",
@@ -71,7 +82,7 @@ const FriedFoods = [
     Image:
       "https://i.pinimg.com/736x/18/2f/4b/182f4b5f937cf960f6ebb23aab41d3fd.jpg",
     id: "FriedModal5",
-    addOns: [],
+    addOns: CrispyPataAddOn,
 
   },
 ];

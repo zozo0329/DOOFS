@@ -1,7 +1,14 @@
 import React from 'react'
 
-const ProductsAction = ({name, price}) => {
+const ProductsAction = ({name, price, handleSelectAddOn}) => {
+  const [checked, setChecked] = React.useState(false);
+  console.log(checked, "CHECKED")
+  const handleChange = () => {
+  const newValue = !checked;
+  setChecked(newValue);
 
+  handleSelectAddOn({ name, price }, newValue); // 👈 send to parent
+};
 
   return (
      <div>
@@ -14,6 +21,8 @@ const ProductsAction = ({name, price}) => {
                 <span className="text-lg font-bold">  {price ? <>₱{price}</> : "Free"}</span>
                 <input
                   type="checkbox"
+                  checked={checked}
+                  onChange={handleChange} 
                   className="form-checkbox h-4 w-4 accent-black"
                   // checked and onChange could be managed via state if needed
                 />
