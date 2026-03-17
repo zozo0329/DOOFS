@@ -3,8 +3,9 @@ import ProductsAction from './ProductsAction/ProductsAction'
 import Button from '../../UI/Buttons/Button'
 import BuyProduct from './ProductsAction/BuyProduct'
 const Products = ({item}) => {
-  console.log(item.addOns, "ITEM") 
-  const [product, setProduct ] = useState()
+
+
+  const [currAmount, setCurrAmount] = useState(1);
 
   const addToCartHandler = () => {
     console.log("clicked")
@@ -13,6 +14,7 @@ const Products = ({item}) => {
       name: item.name,
       image: item.Image,
       price: item.price,
+      amount: currAmount,
       addOns: item.addOns,
     }
    console.log(Product, "PRODUCT")
@@ -36,7 +38,7 @@ const Products = ({item}) => {
         </div>
        </div>
         <div className='flex items-center justify-center sticky bottom-0'>
-        <BuyProduct addToCartHandler={addToCartHandler}/>
+        <BuyProduct addToCartHandler={addToCartHandler} setCurrAmount={setCurrAmount} currAmount={currAmount} />
         </div>
 
     </div>

@@ -14,14 +14,14 @@ const Navbar = () => {
       >
         Sign Up For Free Delivery
       </Button>
-      <Button
+      <button
         className={
-          "btn-circle flex items-center gap-1 rounded-[15px] text-md bg-[#cfcfcf] hover:bg-[#e0e0e0] transition all duration-200"
+          "btn p-2 flex items-center gap-1 rounded-[25px] text-md bg-[#cfcfcf] hover:bg-[#e0e0e0] transition all duration-200 border-2 border-[#000000]"
         }
       >
-        <img src={CartImage} alt="Cart Image" className="h-4 w-4" />
-        <span>69</span>
-      </Button>
+        <img src={CartImage} alt="Cart Image" className="h-5 w-5" />
+        <span className="text-md font-bold">69</span>
+      </button>
     </div>
   );
 };

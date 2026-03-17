@@ -1,7 +1,7 @@
 import React from 'react'
 
 const ProductsAction = ({name, price}) => {
-  console.log(name, price, "PROD ACTION")
+
 
   return (
      <div>
