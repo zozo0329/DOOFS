@@ -1,40 +1,40 @@
-
 // ADD ONS
 
-const FriedChickenAddOn = [{
-  name: "Gravy", 
-  price: 10,
-  id: "GravyAddOn1",
-},
-{
-name: "Tomato Ketchup",
-price: 0,
-id: "TomatoKetchupAddOn1",
-},
-{name: "Banana Ketchup",
-price: 0,
-id: "BananaKetchupAddOn1", }
+const FriedChickenAddOn = [
+  {
+    name: "Gravy",
+    price: 10,
+    id: "GravyAddOn1",
+  },
+  {
+    name: "Tomato Ketchup",
+    price: 0,
+    id: "TomatoKetchupAddOn1",
+  },
+  { name: "Banana Ketchup", price: 0, id: "BananaKetchupAddOn1" },
 ];
-const LumpiaAddOn = [{
-name: "Tomato Ketchup",
-price: 0,
-id: "TomatoKetchupAddOn1",
-},
-{name: "Banana Ketchup",
-price: 0,
-id: "BananaKetchupAddOn1", 
-},]
-const FriedBangusAddOn = [{name: "Soy Sauce with calamansi", price: 0, id: "SoySauceAddOn1"},
-{name: "Vinegar with chili", price: 0, id: "VinegarAddOn1"},];
-const LechonKawaliAddOn = [{name:"Gravy", price: 10, id: "Gravy01"},
-{name: "Vinegar with chili", price: 0, id: "VinegarAddOn1"},
-{name: "Soy Sauce with calamansi", price: 0, id: "SoySauceAddOn1"},
-
+const LumpiaAddOn = [
+  {
+    name: "Tomato Ketchup",
+    price: 0,
+    id: "TomatoKetchupAddOn1",
+  },
+  { name: "Banana Ketchup", price: 0, id: "BananaKetchupAddOn1" },
 ];
-const CrispyPataAddOn = [{name:"Gravy", price: 10, id: "Gravy01"},
-{name: "Soy Sauce with calamansi", price: 0, id: "SoySauceAddOn1"},
-{name: "Vinegar with chili", price: 0, id: "VinegarAddOn1"},
-]; 
+const FriedBangusAddOn = [
+  { name: "Soy Sauce with calamansi", price: 0, id: "SoySauceAddOn1" },
+  { name: "Vinegar with chili", price: 0, id: "VinegarAddOn1" },
+];
+const LechonKawaliAddOn = [
+  { name: "Gravy", price: 10, id: "Gravy01" },
+  { name: "Vinegar with chili", price: 0, id: "VinegarAddOn1" },
+  { name: "Soy Sauce with calamansi", price: 0, id: "SoySauceAddOn1" },
+];
+const CrispyPataAddOn = [
+  { name: "Gravy", price: 10, id: "Gravy01" },
+  { name: "Soy Sauce with calamansi", price: 0, id: "SoySauceAddOn1" },
+  { name: "Vinegar with chili", price: 0, id: "VinegarAddOn1" },
+];
 
 // DISHES
 const FriedFoods = [
@@ -83,31 +83,42 @@ const FriedFoods = [
       "https://i.pinimg.com/736x/18/2f/4b/182f4b5f937cf960f6ebb23aab41d3fd.jpg",
     id: "FriedModal5",
     addOns: CrispyPataAddOn,
-
   },
 ];
-const PastaFoods = [{
-  name: "Spaghetti",
-  description: "All time favorite classic filipino spaghetti",
-  Image:
-    "https://panlasangpinoy.com/wp-content/uploads/2015/05/Filipino-Spaghetti-Panlasang-Pinoy-800x526.jpg",
-  id: "PastaModal1",
-},
-{name: "Carbonara",
- description: "Creamy carbonara with bacon and parmesan", 
- Image: "https://yummykitchentv.com/wp-content/uploads/2022/11/creamy-carbonara-recipe.jpg", 
- id: "PastaModal2"},
- {name: "Pansit", description: "Delicious Filipino noodle dish", Image: "https://i.pinimg.com/736x/ba/1f/40/ba1f40c4e8befb35f6dd3de3b0d167d3.jpg", id: "PastaModal3"},
- {name: "Cheesy Baked Macaroni",
-  description: "Baked macaroni with a cheesy twist",
-  Image: "https://ameessavorydish.com/wp-content/uploads/2011/03/Baked-mac-and-cheese-feature.jpg",
-  id: "PastaModal4"},
+const PastaFoods = [
+  {
+    name: "Spaghetti",
+    description: "All time favorite classic filipino spaghetti",
+    Image:
+      "https://panlasangpinoy.com/wp-content/uploads/2015/05/Filipino-Spaghetti-Panlasang-Pinoy-800x526.jpg",
+    id: "PastaModal1",
+  },
+  {
+    name: "Carbonara",
+    description: "Creamy carbonara with bacon and parmesan",
+    Image:
+      "https://yummykitchentv.com/wp-content/uploads/2022/11/creamy-carbonara-recipe.jpg",
+    id: "PastaModal2",
+  },
+  {
+    name: "Pansit",
+    description: "Delicious Filipino noodle dish",
+    Image:
+      "https://i.pinimg.com/736x/ba/1f/40/ba1f40c4e8befb35f6dd3de3b0d167d3.jpg",
+    id: "PastaModal3",
+  },
+  {
+    name: "Cheesy Baked Macaroni",
+    description: "Baked macaroni with a cheesy twist",
+    Image:
+      "https://ameessavorydish.com/wp-content/uploads/2011/03/Baked-mac-and-cheese-feature.jpg",
+    id: "PastaModal4",
+  },
 ];
 
-
 const FoodData = [
-  {Category: "Fried Foods", FoodItem: FriedFoods , id: "FriedFoods01"},
-  {Category: "Pasta Dishes", FoodItem: PastaFoods , id: "PastaFoods01"},
+  { Category: "Fried Foods", FoodItem: FriedFoods, id: "FriedFoods01" },
+  { Category: "Pasta Dishes", FoodItem: PastaFoods, id: "PastaFoods01" },
 ];
 
 export default FoodData;

@@ -1,5 +1,5 @@
 import React from "react";
-import AddIcon from "../../../assets/Images/add.png";
+import AddIcon from "../../../assets/Images/addICON.png";
 const FoodModal = ({ item }) => {
   return (
     <>
