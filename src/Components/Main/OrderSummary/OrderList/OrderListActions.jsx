@@ -1,23 +1,33 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import Button from "../../../UI/Buttons/Button";
 import CartContext from "../../../../Other/Store/CartContext";
-const OrderListActions = () => {
-  const cartCtx = useContext(CartContext);
-  const [cartAmount, setCartAmount] = useState(cartCtx.items.length);
+const OrderListActions = ({ item }) => {
+  const { addItem, removeItem } = useContext(CartContext);
 
   const increaseHandler = () => {
     console.log("Clicked");
-    setCartAmount(cartAmount + 1);
+    addItem({ ...item, amount: 1 });
   };
   const decreaseHandler = () => {
-    console.log("Clicked");
-    setCartAmount((prev) => (prev > 1 ? prev - 1 : 1));
+    removeItem(item.id);
   };
   return (
     <div className="flex flex-row items-center gap-2">
-      <Button onClick={decreaseHandler}>{"<"}</Button>
-      <p>{cartAmount}</p>
-      <Button onClick={increaseHandler}>{">"}</Button>
+      <Button
+        onClick={() => {
+          decreaseHandler();
+        }}
+      >
+        {"<"}
+      </Button>
+      <p>{item.amount}</p>
+      <Button
+        onClick={() => {
+          increaseHandler();
+        }}
+      >
+        {">"}
+      </Button>
     </div>
   );
 };
