@@ -1,15 +1,22 @@
-import React from 'react'
-
-const OrderListItem = () => {
+import React from "react";
+const OrderListItem = ({ name, image, addOns }) => {
   return (
-    <div className="flex flex-row items-center gap-5">
-        <img src="https://i.pinimg.com/736x/ba/1f/40/ba1f40c4e8befb35f6dd3de3b0d167d3.jpg" alt="Image" className="h-15"/>
+    <>
+      <div className="flex flex-row items-center gap-5">
         <div>
-          <p>Item Name</p>
-          <p>Add Ons</p>
+          <img src={image} alt={name} className="h-15 rounded-[10px]" />
+        </div>
+        <div>
+          <p className="text-[18px] font-semibold">{name}</p>
+          <div className="flex flex-row gap-3 flex-wrap">
+            {addOns?.map((add, i) => (
+              <p key={add.id || i}>{add.name}</p>
+            ))}
+          </div>
         </div>
       </div>
-  )
-}
+    </>
+  );
+};
 
-export default OrderListItem
+export default OrderListItem;

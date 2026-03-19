@@ -6,7 +6,7 @@ const ProductsAction = ({ name, price, handleSelectAddOn }) => {
   const handleChange = () => {
     const newValue = !checked;
     setChecked(newValue);
-    handleSelectAddOn({ name, price }, newValue);
+    handleSelectAddOn({ name, price, id: Math.random().toString() }, newValue);
   };
   return (
     <div>
