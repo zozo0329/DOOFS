@@ -2,10 +2,10 @@ import React from "react";
 
 const ProductsAction = ({ name, price, handleSelectAddOn }) => {
   const [checked, setChecked] = React.useState(false);
-  console.log(checked, "CHECKED");
   const handleChange = () => {
     const newValue = !checked;
     setChecked(newValue);
+
     handleSelectAddOn({ name, price, id: Math.random().toString() }, newValue);
   };
   return (

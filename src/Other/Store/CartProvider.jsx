@@ -34,7 +34,33 @@ const cartReducer = (state, action) => {
       };
     }
     case "REMOVE_ITEM": {
-      const ExistingItemIdex = state;
+      const existingItemIdex = state.items.findIndex(
+        (item) => item.id === action.id,
+      );
+      if (existingItemIdex === -1) {
+        return state;
+      }
+      const existingItem = state.items[existingItemIdex];
+      const addonsTotal = existingItem.addOns
+        ? existingItem.addOns.reduce((sum, addon) => sum + addon.price, 0)
+        : 0;
+
+      const itemTotal = (existingItem.price + addonsTotal) * 1; // remove 1 unit
+      const updatedTotalAmount = state.totalAmount - itemTotal;
+
+      let updatedItems;
+
+      if (existingItem.amount === 1) {
+        updatedItems = state.items.filter((item) => item.id !== action.id);
+      } else {
+        const updatedItem = {
+          ...existingItem,
+          amount: existingItem.amount - 1,
+        };
+        updatedItems = [...state.items];
+        updatedItems[existingItemIdex] = updatedItem;
+      }
+      return { items: updatedItems, totalAmount: updatedTotalAmount };
     }
   }
   return state;
