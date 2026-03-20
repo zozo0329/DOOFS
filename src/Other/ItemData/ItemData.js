@@ -7,7 +7,7 @@ const slides = [
   {
     id: "slide2",
     image:
-      "https://img.pikbest.com/wp/202346/hunger-rapidly-satisfy-your-with-3d-fast-food-background-03_9739275.jpg!bw700",
+      "https://tasteandflavors.com/wp-content/uploads/2019/07/ice-cream-landscape.gif",
   },
   {
     id: "slide3",
@@ -17,7 +17,21 @@ const slides = [
   {
     id: "slide4",
     image:
-      "https://t3.ftcdn.net/jpg/05/89/70/46/360_F_589704609_b84XoVDaeopctL2Iz0lG4IQT86Dzm7xz.jpg",
+      "https://img.freepik.com/premium-photo/delicious-french-fries-white-background_602089-2772.jpg",
+  },
+  {
+    id: "slide5",
+    image:
+      "https://images.stockcake.com/public/0/9/4/0948390e-a6d7-4431-a2af-76b4b1b630c0/glowing-pasta-landscape-stockcake.jpg",
+  },
+  {
+    id: "slide6",
+    image: "https://images2.alphacoders.com/132/1322069.png",
+  },
+  {
+    id: "slide7",
+    image:
+      "https://static.vecteezy.com/system/resources/previews/027/671/368/large_2x/crispy-fried-chicken-on-the-wooden-board-with-dark-lighting-and-black-background-food-and-delivery-concept-generative-ai-free-photo.jpg",
   },
 ];
 

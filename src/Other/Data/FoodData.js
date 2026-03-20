@@ -1,5 +1,5 @@
 // ADD ONS
-
+// Fried Add Ons
 const FriedChickenAddOn = [
   {
     name: "Gravy",
@@ -35,7 +35,32 @@ const CrispyPataAddOn = [
   { name: "Soy Sauce with calamansi", price: 0, id: "SoySauceAddOn1" },
   { name: "Vinegar with chili", price: 0, id: "VinegarAddOn1" },
 ];
-
+// Pasta Add Ons
+const spaghettiAddOns = [
+  { id: "sp1", name: "Cheese", price: 20 },
+  { id: "sp2", name: "Meatballs", price: 40 },
+  { id: "sp3", name: "Extra Sauce", price: 15 },
+  { id: "sp4", name: "Bacon Bits", price: 25 },
+  { id: "sp5", name: "Mushrooms", price: 20 },
+];
+const carbonaraAddOns = [
+  { id: "c1", name: "Extra Bacon", price: 30 },
+  { id: "c2", name: "Parmesan Cheese", price: 25 },
+  { id: "c3", name: "Mushrooms", price: 20 },
+  { id: "c4", name: "Garlic Bread", price: 35 },
+];
+const pansitAddOns = [
+  { id: "p1", name: "Extra Veggies", price: 15 },
+  { id: "p2", name: "Chicken", price: 30 },
+  { id: "p3", name: "Shrimp", price: 40 },
+  { id: "p4", name: "Boiled Egg", price: 10 },
+];
+const bakedMacaroniAddOns = [
+  { id: "m1", name: "Extra Cheese", price: 25 },
+  { id: "m2", name: "Bacon Bits", price: 30 },
+  { id: "m3", name: "Breadcrumbs Topping", price: 15 },
+  { id: "m4", name: "Mushrooms", price: 20 },
+];
 // DISHES
 const FriedFoods = [
   {
@@ -93,7 +118,7 @@ const PastaFoods = [
     Image:
       "https://panlasangpinoy.com/wp-content/uploads/2015/05/Filipino-Spaghetti-Panlasang-Pinoy-800x526.jpg",
     id: "PastaModal1",
-    addOns: [],
+    addOns: spaghettiAddOns,
   },
   {
     name: "Carbonara",
@@ -102,16 +127,16 @@ const PastaFoods = [
     Image:
       "https://yummykitchentv.com/wp-content/uploads/2022/11/creamy-carbonara-recipe.jpg",
     id: "PastaModal2",
-    addOns: [],
+    addOns: carbonaraAddOns,
   },
   {
     name: "Pansit",
     price: 100,
-    description: "Delicious Filipino noodle dish",
+    description: "Delicious Filipino noodle dish good for 4 people",
     Image:
       "https://i.pinimg.com/736x/ba/1f/40/ba1f40c4e8befb35f6dd3de3b0d167d3.jpg",
     id: "PastaModal3",
-    addOns: [],
+    addOns: pansitAddOns,
   },
   {
     name: "Cheesy Baked Macaroni",
@@ -120,13 +145,23 @@ const PastaFoods = [
     Image:
       "https://ameessavorydish.com/wp-content/uploads/2011/03/Baked-mac-and-cheese-feature.jpg",
     id: "PastaModal4",
-    addOns: [],
+    addOns: bakedMacaroniAddOns,
   },
 ];
+const Salads = [];
+const Combos = [];
+const Appetizers = [];
+const Beverages = [];
+const Desserts = [];
 
 const FoodData = [
   { Category: "Fried Foods", FoodItem: FriedFoods, id: "FriedFoods01" },
-  { Category: "Pasta Dishes", FoodItem: PastaFoods, id: "PastaFoods01" },
+  { Category: "Our Pastas", FoodItem: PastaFoods, id: "PastaFoods01" },
+  { Category: "Salads", FoodItem: Salads, id: "Salads01" },
+  { Category: "Special Combos", FoodItem: Combos, id: "Combos01" },
+  { Category: "Appetizers", FoodItem: Appetizers, id: "Appetizers01" },
+  { Category: "Beverages", FoodItem: Beverages, id: "Beverages01" },
+  { Category: "Desserts", FoodItem: Desserts, id: "Desserts01" },
 ];
 
 export default FoodData;

@@ -17,6 +17,42 @@ const SlideItem = () => {
   return (
     <>
       <Carousel>
+        {/* SLIDES CONTAINER */}
+        <div
+          className="flex transition-transform duration-700 ease-in-out"
+          style={{ transform: `translateX(-${active * 100}%)` }}
+        >
+          {slides.map((item) => (
+            <div key={item.id} className="w-full shrink-0 relative">
+              <img
+                src={item.image}
+                alt={item.description}
+                className="w-full h-110 object-cover object-center"
+              />
+            </div>
+          ))}
+        </div>
+
+        {/* BUTTONS */}
+        <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 justify-between">
+          <button
+            onClick={() =>
+              setActive((prev) => (prev - 1 + slides.length) % slides.length)
+            }
+            className="btn btn-circle transition-all duration-200 hover:bg-[#e0e0e0] hover:scale-110"
+          >
+            ❮
+          </button>
+
+          <button
+            onClick={() => setActive((prev) => (prev + 1) % slides.length)}
+            className="btn btn-circle transition-all duration-200 hover:bg-[#e0e0e0] hover:scale-110"
+          >
+            ❯
+          </button>
+        </div>
+      </Carousel>
+      {/* <Carousel>
         {slides.map((item, i) => {
           const prevIndex = (i - 1 + slides.length) % slides.length;
           const nextIndex = (i + 1) % slides.length;
@@ -25,7 +61,8 @@ const SlideItem = () => {
             <div
               key={item.id}
               id={item.id}
-              className={`carousel-item relative w-full ${active === i ? "" : "hidden"}`}
+              className={`absolute inset-0 transition-all duration-700 ease-in-out
+  ${active === i ? "opacity-100 translate-x-0 z-10" : "opacity-0 translate-x-full z-0"}`}
             >
               <img
                 src={item.image}
@@ -53,7 +90,7 @@ const SlideItem = () => {
             </div>
           );
         })}
-      </Carousel>
+      </Carousel> */}
     </>
   );
 };

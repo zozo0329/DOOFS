@@ -3,7 +3,7 @@ import React from "react";
 const Carousel = ({ children }) => {
   return (
     <>
-      <div className="carousel w-full">
+      <div className="w-full h-110 relative overflow-hidden bg-black">
         {children}
         {/* <div id="slide1" className="carousel-item relative w-full">
           <img
