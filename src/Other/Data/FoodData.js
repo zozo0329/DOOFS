@@ -88,31 +88,39 @@ const FriedFoods = [
 const PastaFoods = [
   {
     name: "Spaghetti",
+    price: 120,
     description: "All time favorite classic filipino spaghetti",
     Image:
       "https://panlasangpinoy.com/wp-content/uploads/2015/05/Filipino-Spaghetti-Panlasang-Pinoy-800x526.jpg",
     id: "PastaModal1",
+    addOns: [],
   },
   {
     name: "Carbonara",
+    price: 140,
     description: "Creamy carbonara with bacon and parmesan",
     Image:
       "https://yummykitchentv.com/wp-content/uploads/2022/11/creamy-carbonara-recipe.jpg",
     id: "PastaModal2",
+    addOns: [],
   },
   {
     name: "Pansit",
+    price: 100,
     description: "Delicious Filipino noodle dish",
     Image:
       "https://i.pinimg.com/736x/ba/1f/40/ba1f40c4e8befb35f6dd3de3b0d167d3.jpg",
     id: "PastaModal3",
+    addOns: [],
   },
   {
     name: "Cheesy Baked Macaroni",
+    price: 140,
     description: "Baked macaroni with a cheesy twist",
     Image:
       "https://ameessavorydish.com/wp-content/uploads/2011/03/Baked-mac-and-cheese-feature.jpg",
     id: "PastaModal4",
+    addOns: [],
   },
 ];
 
