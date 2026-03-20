@@ -8,8 +8,10 @@ const SummaryAction = () => {
       <div className="flex flex-col gap-5 pt-5">
         <div>
           <div className="flex justify-between">
-            <p className="text-lg font-bold">Total:</p>
-            <p className="text-lg font-bold">₱{cartCtx.totalAmount}</p>
+            <p className="text-lg font-bold cursor-default">Total:</p>
+            <p className="text-lg font-bold cursor-default">
+              ₱{cartCtx.totalAmount}
+            </p>
           </div>
           <div>
             <a href="#" className="hover:underline">

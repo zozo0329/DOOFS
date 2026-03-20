@@ -14,13 +14,22 @@ const MainContent = () => {
       <div className="flex flex-row justify-center items-start ">
         <div>
           {FoodData.map((category) => (
-            <div key={category.id} className="flex flex-col gap-4 items-center justify-center pt-10">
+            <div
+              key={category.id}
+              className="flex flex-col gap-4 items-center justify-center pt-10"
+            >
               <div>
-                <h1 className="text-5xl font-bold text-[#be4600]">{category.Category}</h1>
+                <h1 className="text-5xl font-bold text-[#be4600] cursor-default">
+                  {category.Category}
+                </h1>
               </div>
               <div className="p-5 flex flex-wrap gap-5 items-center">
                 {category.FoodItem.map((item) => (
-                  <ItemModal key={item.id} item={item} content={<Products item={item}/>}>
+                  <ItemModal
+                    key={item.id}
+                    item={item}
+                    content={<Products item={item} />}
+                  >
                     <FoodModal item={item} />
                   </ItemModal>
                 ))}
