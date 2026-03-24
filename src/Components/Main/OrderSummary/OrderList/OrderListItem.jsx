@@ -4,7 +4,7 @@ const OrderListItem = ({ name, image, addOns }) => {
     <>
       <div className="flex flex-row items-center gap-5">
         <div>
-          <img src={image} alt={name} className="h-15 rounded-[10px]" />
+          <img src={image} alt={name} className="h-15 w-18 rounded-[10px]" />
         </div>
         <div>
           <p className="text-[18px] font-semibold">{name}</p>
