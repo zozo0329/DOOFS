@@ -61,6 +61,81 @@ const bakedMacaroniAddOns = [
   { id: "m3", name: "Breadcrumbs Topping", price: 15 },
   { id: "m4", name: "Mushrooms", price: 20 },
 ];
+// Salad Add Ons
+const fruitAddOns = [
+  { name: "Cheese", price: 20 },
+  { name: "Nata de Coco", price: 15 },
+  { name: "Kaong", price: 15 },
+  { name: "Extra Cream", price: 10 },
+];
+const macaroniAddOns = [
+  { name: "Extra Chicken", price: 30 },
+  { name: "Cheese", price: 20 },
+  { name: "Extra Dressing", price: 10 },
+];
+const bukoAddOns = [
+  { name: "Extra Buko", price: 25 },
+  { name: "Nata de Coco", price: 15 },
+  { name: "Extra Cream", price: 10 },
+];
+
+// Beverages
+
+const sagoGulamanAddOns = [
+  { name: "Extra Sago", price: 10 },
+  { name: "Extra Gulaman", price: 10 },
+  { name: "Extra Brown Sugar Syrup", price: 5 },
+];
+
+const calamansiJuiceAddOns = [
+  { name: "Extra Sweetener", price: 5 },
+  { name: "Add Ice", price: 5 },
+];
+
+const bukoJuiceAddOns = [
+  { name: "Extra Buko Meat", price: 15 },
+  { name: "Add Ice", price: 5 },
+];
+
+const cucumberLemonadeAddOns = [
+  { name: "Extra Lemon", price: 5 },
+  { name: "Add Ice", price: 5 },
+  { name: "Extra Sugar", price: 5 },
+];
+
+const icedTeaAddOns = [
+  { name: "Add Lemon", price: 5 },
+  { name: "Extra Sugar", price: 5 },
+  { name: "Add Ice", price: 5 },
+];
+
+// DESSERTS
+const lecheFlanAddOns = [
+  { name: "Extra Caramel", price: 10 },
+  { name: "Extra Creaminess", price: 10 },
+];
+
+const haloHaloAddOns = [
+  { name: "Extra Ube Ice Cream", price: 30 },
+  { name: "Extra Leche Flan", price: 20 },
+  { name: "Extra Sweet Beans", price: 15 },
+];
+
+const ubeHalayaAddOns = [
+  { name: "Extra Topping (Coconut Flakes)", price: 10 },
+  { name: "Serve Chilled", price: 0 },
+];
+
+const bukoPandanAddOns = [
+  { name: "Extra Buko", price: 15 },
+  { name: "Extra Pandan Jelly", price: 10 },
+];
+
+const majaBlancaAddOns = [
+  { name: "Extra Corn Topping", price: 10 },
+  { name: "Serve Chilled", price: 0 },
+];
+
 // DISHES
 const FriedFoods = [
   {
@@ -148,20 +223,155 @@ const PastaFoods = [
     addOns: bakedMacaroniAddOns,
   },
 ];
-const Salads = [];
-const Combos = [];
-const Appetizers = [];
-const Beverages = [];
-const Desserts = [];
+const Salads = [
+  {
+    name: "Fruit Salad",
+    price: 120,
+    description: `Creamy Filipino-style fruit salad
+Mixed fruits with sweet cream and cheese`,
+    Image:
+      "https://diaryrecipes.com/wp-content/uploads/2025/06/Best_Fruit_Cocktail_Salad_1.webp",
+    id: "SaladModal1",
+    addOns: fruitAddOns,
+  },
+  {
+    name: "Macaroni Salad",
+    price: 110,
+    description: `Sweet and creamy macaroni salad
+Mixed with chicken, pineapple, and cheese`,
+    Image:
+      "https://www.foxyfolksy.com/wp-content/uploads/2018/12/chicken-macaroni-salad-640.jpg",
+    id: "SaladModal2",
+    addOns: macaroniAddOns,
+  },
+  {
+    name: "Buko Salad",
+    price: 130,
+    description: `Refreshing buko (young coconut) salad
+Mixed with fruits and creamy dressing`,
+    Image:
+      "https://cdn.shortpixel.ai/spai/q_lossy+ret_img+to_webp/kusinasecrets.com/wp-content/uploads/2024/11/u3317447599_httpss.mj_.runshvWL2PHCoU_Hyperrealistic_tclose_up_5fb05b1c-f26f-4161-a07d-6855ac864fe8_2.jpg",
+    id: "SaladModal3",
+    addOns: bukoAddOns,
+  },
+];
+// const Combos = [];
+const Beverages = [
+  {
+    name: "Sago’t Gulaman",
+    price: 50,
+    description: `Sweet Filipino drink
+Filled with tapioca pearls (sago) and jelly (gulaman)`,
+    Image:
+      "https://images.yummy.ph/yummy/uploads/2016/03/1603_doublemintsagogulaman-314-1.jpg",
+    id: "BeverageModal1",
+    addOns: sagoGulamanAddOns,
+  },
+  {
+    name: "Calamansi Juice",
+    price: 45,
+    description: `Refreshing calamansi citrus juice
+Slightly sweet and tangy
+Served chilled or over ice`,
+    Image:
+      "https://kusinasecrets.com/wp-content/uploads/2024/11/u3317447599_httpss.mj_.runV8kKiRcBs0M_A_refreshing_glass_of_go_4cdd9374-f9a2-40c9-83ee-e4d867f93188_2.webp",
+    id: "BeverageModal2",
+    addOns: calamansiJuiceAddOns,
+  },
+  {
+    name: "Buko Juice",
+    price: 60,
+    description: `Fresh young coconut juice
+Naturally sweet and refreshing
+Served chilled in coconut shell or glass`,
+    Image:
+      "https://cdn.shortpixel.ai/spai/q_lossy+ret_img+to_webp/kusinasecrets.com/wp-content/uploads/2024/11/u3317447599_Photorealistic_hands_holding_a_glass_of_fresh_buk_5729fcd7-30d1-46e2-835a-f81ae1cac6c4_3.png",
+    id: "BeverageModal3",
+    addOns: bukoJuiceAddOns,
+  },
+  {
+    name: "Cucumber Lemonade",
+    price: 50,
+    description: `Cool and refreshing lemonade
+Infused with fresh cucumber slices
+Perfect for hot days`,
+    Image:
+      "https://i.pinimg.com/originals/06/2d/86/062d866cbe26848a911ee72fcbfffe37.jpg",
+    id: "BeverageModal4",
+    addOns: cucumberLemonadeAddOns,
+  },
+  {
+    name: "Iced Tea",
+    price: 40,
+    description: `Classic Filipino-style iced tea
+Sweetened to taste and served chilled`,
+    Image:
+      "https://feedgrump.com/wp-content/uploads/2023/04/Hong-kong-lemon-tea-feature.jpg",
+    id: "BeverageModal5",
+    addOns: icedTeaAddOns,
+  },
+];
+const Desserts = [
+  {
+    name: "Leche Flan",
+    price: 70,
+    description: `Creamy caramel custard
+Rich, sweet, and smooth
+A Filipino fiesta classic`,
+    Image:
+      "https://i.pinimg.com/originals/de/be/9d/debe9dcdb288ae9f260cfde4cd182f61.jpg",
+    id: "DessertModal1",
+    addOns: lecheFlanAddOns,
+  },
+  {
+    name: "Halo-Halo",
+    price: 120,
+    description: `Shaved ice with mixed fruits, beans, jellies, and leche flan
+Topped with evaporated milk`,
+    Image:
+      "https://www.obsessivecooking.com/wp-content/uploads/2023/05/halohalo3-1200.jpg",
+    id: "DessertModal2",
+    addOns: haloHaloAddOns,
+  },
+  {
+    name: "Ube Halaya",
+    price: 80,
+    description: `Sweet purple yam jam
+Creamy, smooth, and slightly nutty
+`,
+    Image:
+      "https://i.pinimg.com/originals/8c/4d/f1/8c4df18b9f91ce041396fcb043b01ff3.jpg",
+    id: "DessertModal3",
+    addOns: ubeHalayaAddOns,
+  },
+  {
+    name: "Buko Pandan",
+    price: 90,
+    description: `Young coconut and pandan-flavored jelly
+Sweet, creamy`,
+    Image:
+      "https://kusinasecrets.com/wp-content/uploads/2024/11/u3317447599_httpss.mj_.runclxkxoTdzlw_top_down_view_of_a_bowl__df5f1936-cc01-4b91-bdf8-f8f3fb0ceaab_3.jpg",
+    id: "DessertModal4",
+    addOns: bukoPandanAddOns,
+  },
+  {
+    name: "Maja Blanca",
+    price: 80,
+    description: `Coconut milk pudding
+Smooth, creamy, topped with toasted corn`,
+    Image:
+      "https://i.pinimg.com/originals/a1/55/53/a155535780415a41a310498b4bd4fba6.jpg",
+    addOns: majaBlancaAddOns,
+  },
+];
 
 const FoodData = [
   { Category: "Fried Foods", FoodItem: FriedFoods, id: "FriedFoods01" },
   { Category: "Our Pastas", FoodItem: PastaFoods, id: "PastaFoods01" },
   { Category: "Salads", FoodItem: Salads, id: "Salads01" },
-  { Category: "Special Combos", FoodItem: Combos, id: "Combos01" },
-  { Category: "Appetizers", FoodItem: Appetizers, id: "Appetizers01" },
   { Category: "Beverages", FoodItem: Beverages, id: "Beverages01" },
   { Category: "Desserts", FoodItem: Desserts, id: "Desserts01" },
 ];
+// { Category: "Special Combos", FoodItem: Combos, id: "Combos01" },
 
 export default FoodData;
