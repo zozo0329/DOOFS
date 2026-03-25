@@ -24,9 +24,9 @@ const MainContent = () => {
                 </h1>
               </div>
               <div className="p-5 flex flex-wrap gap-5 items-center">
-                {category.FoodItem.map((item) => (
+                {category.FoodItem.map((item, i) => (
                   <ItemModal
-                    key={item.id}
+                    key={item.id || i}
                     item={item}
                     content={<Products item={item} />}
                   >

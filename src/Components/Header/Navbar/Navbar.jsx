@@ -1,7 +1,9 @@
 import React, { useContext } from "react";
 import Button from "../../UI/Buttons/Button";
 import CartImage from "../../../assets/Images/grocery-store.png";
+import CartButton from "../Navbar/CartButton/CartButton";
 import CartContext from "../../../Other/Store/CartContext";
+import CartModal from "../../UI/Modal/CartModal/CartModal";
 const Navbar = () => {
   const cartCtx = useContext(CartContext);
   return (
@@ -16,23 +18,18 @@ const Navbar = () => {
       >
         Sign Up For Free Delivery
       </Button>
-      <button
-        className={`btn p-2 flex items-center gap-1 rounded-[25px] text-md border w-12
-    transition-all duration-200 
-    ${
-      cartCtx.items.length === 0
-        ? "bg-gray-300 border-gray-500 cursor-not-allowed scale-100 border-0"
-        : "bg-[#e9e9e9] hover:bg-[#e0e0e0] border-black cursor-pointer hover:scale-105"
-    }`}
-        disabled={cartCtx.items.length === 0} // prevents clicking
+      <CartModal
+        className={`btn p-3 flex items-center gap-1 rounded-[25px] text-md border w-12
+      transition-all duration-200
+      ${
+        cartCtx.items.length === 0
+          ? "bg-gray-300 border-gray-500 cursor-not-allowed scale-100 border-0"
+          : "bg-[#e9e9e9] hover:bg-[#e0e0e0] border-black cursor-pointer hover:scale-105"
+      }`}
+        disabled={cartCtx.items.length === 0}
       >
-        <img
-          src={CartImage}
-          alt="Cart Image"
-          className={` ${cartCtx.items.length === 0 ? "h-3 w-3" : "h-4 w-4"}`}
-        />
-        <span className="text-md font-bold">{cartCtx.items.length}</span>
-      </button>
+        <CartButton image={CartImage} amount={cartCtx.items.length} />
+      </CartModal>
     </div>
   );
 };

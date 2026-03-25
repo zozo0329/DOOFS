@@ -49,9 +49,9 @@ const Products = ({ item }) => {
           <h1 className="text-[19px] font-semibold text-center">
             Add ons {"(Optional)"}
           </h1>
-          {item.addOns?.map((addOn) => (
+          {item.addOns?.map((addOn, i) => (
             <ProductsAction
-              key={addOn.id}
+              key={addOn.id || i}
               name={addOn.name}
               price={addOn.price}
               handleSelectAddOn={handleSelectAddOn}
