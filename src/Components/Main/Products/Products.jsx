@@ -27,6 +27,9 @@ const Products = ({ item }) => {
       id: Math.random().toString(),
     };
     cartCtx.addItem(Product);
+
+    setSelectedAddOns([]);
+    setCurrAmount(1);
     document.getElementById(item.id).close();
   };
   return (
@@ -52,6 +55,7 @@ const Products = ({ item }) => {
               name={addOn.name}
               price={addOn.price}
               handleSelectAddOn={handleSelectAddOn}
+              checked={selectedAddOns.some((a) => a.name === addOn.name)}
             />
           ))}
         </div>
