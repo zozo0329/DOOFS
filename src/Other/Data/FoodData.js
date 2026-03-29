@@ -35,6 +35,24 @@ const CrispyPataAddOn = [
   { name: "Soy Sauce with calamansi", price: 0, id: "SoySauceAddOn1" },
   { name: "Vinegar with chili", price: 0, id: "VinegarAddOn1" },
 ];
+const FriedTilapiaAddOn = [
+  {
+    name: "Extra Vinegar Dip",
+    price: 10,
+    id: "FTAddOn1",
+  },
+  {
+    name: "Sliced Tomatoes",
+    price: 15,
+    id: "FTAddOn4",
+  },
+  {
+    name: "Lemon Wedge",
+    price: 5,
+    id: "FTAddOn5",
+  },
+];
+
 // Pasta Add Ons
 const spaghettiAddOns = [
   { id: "sp1", name: "Cheese", price: 20 },
@@ -78,6 +96,28 @@ const bukoAddOns = [
   { name: "Nata de Coco", price: 15 },
   { name: "Extra Cream", price: 10 },
 ];
+const ChickenSaladAddOn = [
+  {
+    name: "Extra Dressing",
+    price: 10,
+    id: "CSAAddOn1",
+  },
+  {
+    name: "Extra Chicken",
+    price: 40,
+    id: "CSAAddOn2",
+  },
+  {
+    name: "Bread Roll",
+    price: 15,
+    id: "CSAAddOn3",
+  },
+  {
+    name: "Boiled Egg",
+    price: 15,
+    id: "CSAAddOn4",
+  },
+];
 
 // Beverages
 
@@ -86,23 +126,19 @@ const sagoGulamanAddOns = [
   { name: "Extra Gulaman", price: 10 },
   { name: "Extra Brown Sugar Syrup", price: 5 },
 ];
-
 const calamansiJuiceAddOns = [
   { name: "Extra Sweetener", price: 5 },
   { name: "Add Ice", price: 5 },
 ];
-
 const bukoJuiceAddOns = [
   { name: "Extra Buko Meat", price: 15 },
   { name: "Add Ice", price: 5 },
 ];
-
 const cucumberLemonadeAddOns = [
   { name: "Extra Lemon", price: 5 },
   { name: "Add Ice", price: 5 },
   { name: "Extra Sugar", price: 5 },
 ];
-
 const icedTeaAddOns = [
   { name: "Add Lemon", price: 5 },
   { name: "Extra Sugar", price: 5 },
@@ -114,28 +150,23 @@ const lecheFlanAddOns = [
   { name: "Extra Caramel", price: 10 },
   { name: "Extra Creaminess", price: 10 },
 ];
-
 const haloHaloAddOns = [
   { name: "Extra Ube Ice Cream", price: 30 },
   { name: "Extra Leche Flan", price: 20 },
   { name: "Extra Sweet Beans", price: 15 },
 ];
-
 const ubeHalayaAddOns = [
   { name: "Extra Topping (Coconut Flakes)", price: 10 },
   { name: "Serve Chilled", price: 0 },
 ];
-
 const bukoPandanAddOns = [
   { name: "Extra Buko", price: 15 },
   { name: "Extra Pandan Jelly", price: 10 },
 ];
-
 const majaBlancaAddOns = [
   { name: "Extra Corn Topping", price: 10 },
   { name: "Serve Chilled", price: 0 },
 ];
-
 // DISHES
 const FriedFoods = [
   {
@@ -165,6 +196,16 @@ const FriedFoods = [
       "https://cdn.tastephilippines.com/wp-content/uploads/2022/10/golden-brown-fried-bangus-from-the-Philippines-768x768.jpg?strip=all&lossy=1&ssl=1",
     id: "FriedModal3",
     addOns: FriedBangusAddOn,
+  },
+  {
+    name: "Fried Tilapia",
+    price: 200,
+    description:
+      "Whole tilapia, cleaned and deep-fried until crispy, served with a side of vinegar dip.",
+    Image:
+      "https://img.sndimg.com/food/image/upload/q_92,fl_progressive,w_1200,c_scale/v1/img/recipes/46/49/36/5GAes5MuQ22mXo6ynheY_17956459636.jpg",
+    id: "FriedModalTilapia",
+    addOns: FriedTilapiaAddOn,
   },
   {
     name: "Lechon Kawali",
@@ -254,8 +295,16 @@ Mixed with fruits and creamy dressing`,
     id: "SaladModal3",
     addOns: bukoAddOns,
   },
+  {
+    name: "Chicken Salad",
+    price: 180,
+    description: "Shredded chicken mixed with diced vegetables, and fruits.",
+    Image:
+      "https://cheffrecipes.com/wp-content/uploads/2025/02/Creamy-Chicken-Salad-Recipe-1068x1068.jpg",
+    id: "ChickenSaladModal1",
+    addOns: ChickenSaladAddOn,
+  },
 ];
-// const Combos = [];
 const Beverages = [
   {
     name: "Sago’t Gulaman",
@@ -364,7 +413,7 @@ Smooth, creamy, topped with toasted corn`,
     addOns: majaBlancaAddOns,
   },
 ];
-
+// MAIN DATA
 const FoodData = [
   { Category: "Fried Foods", FoodItem: FriedFoods, id: "FriedFoods01" },
   { Category: "Our Pastas", FoodItem: PastaFoods, id: "PastaFoods01" },
@@ -372,6 +421,5 @@ const FoodData = [
   { Category: "Beverages", FoodItem: Beverages, id: "Beverages01" },
   { Category: "Desserts", FoodItem: Desserts, id: "Desserts01" },
 ];
-// { Category: "Special Combos", FoodItem: Combos, id: "Combos01" },
 
 export default FoodData;
