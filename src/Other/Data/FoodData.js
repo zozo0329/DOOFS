@@ -410,6 +410,7 @@ Sweet, creamy`,
 Smooth, creamy, topped with toasted corn`,
     Image:
       "https://i.pinimg.com/originals/a1/55/53/a155535780415a41a310498b4bd4fba6.jpg",
+    id: "DessertModal5",
     addOns: majaBlancaAddOns,
   },
 ];

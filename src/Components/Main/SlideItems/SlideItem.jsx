@@ -39,14 +39,14 @@ const SlideItem = () => {
             onClick={() =>
               setActive((prev) => (prev - 1 + slides.length) % slides.length)
             }
-            className="btn btn-circle transition-all duration-200 hover:bg-[#e0e0e0] hover:scale-110"
+            className="btn btn-circle transition-all duration-200 hover:bg-[#e0e0e0] hover:scale-110 opacity-25"
           >
             ❮
           </button>
 
           <button
             onClick={() => setActive((prev) => (prev + 1) % slides.length)}
-            className="btn btn-circle transition-all duration-200 hover:bg-[#e0e0e0] hover:scale-110"
+            className="btn btn-circle transition-all duration-200 hover:bg-[#e0e0e0] hover:scale-110 opacity-25"
           >
             ❯
           </button>
