@@ -7,10 +7,12 @@ const OrderListItem = ({ name, image, addOns }) => {
           <img src={image} alt={name} className="h-15 w-18 rounded-[10px]" />
         </div>
         <div>
-          <p className="text-[18px] font-semibold">{name}</p>
+          <p className="text-[18px] font-semibold cursor-default">{name}</p>
           <div className="flex flex-row gap-3 flex-wrap">
             {addOns?.map((add, i) => (
-              <p key={add.id || i}>{add.name}</p>
+              <p key={add.id || i} className="cursor-default">
+                {add.name}
+              </p>
             ))}
           </div>
         </div>

@@ -1,0 +1,18 @@
+.orderSummaryWrapper {
+  position: sticky;
+  top: 12px;
+  z-index: 50;
+}
+
+@media (max-width: 1000px) {
+  .orderSummaryWrapper {
+    display: none;
+  }
+
+  .mainContentWrapper {
+    align-items: center;
+  }
+  .foodItemsWrapper {
+    justify-content: center;
+  }
+}

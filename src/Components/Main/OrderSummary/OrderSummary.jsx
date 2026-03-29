@@ -2,6 +2,7 @@ import { useContext } from "react";
 import OrderList from "./OrderList/OrderList";
 import SummaryAction from "./SummaryAction/SummaryAction";
 import CartContext from "../../../Other/Store/CartContext";
+import OrderSummaryStyle from "./OrderSummary.module.css";
 
 const OrderSummary = () => {
   const cartCtx = useContext(CartContext);
@@ -9,7 +10,9 @@ const OrderSummary = () => {
   console.log(cartItems, "CARTITEMS");
 
   return (
-    <div className="w-140 max-h-125 bg-white text-black card-md flex-col justify-start items-start p-5 gap-5 rounded-2xl shadow-md border border-[#c0c0c0]">
+    <div
+      className={`w-140 max-h-125 bg-white text-black card-md flex-col justify-start items-start p-5 gap-5 rounded-2xl shadow-md border border-[#c0c0c0] ${OrderSummaryStyle.orderSummaryContainer}`}
+    >
       <div className="pb-5">
         <p className="text-xl font-semibold cursor-default">Your items</p>
       </div>

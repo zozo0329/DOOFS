@@ -6,13 +6,16 @@ import FoodModal from "../FoodModal/FoodModal";
 import FoodData from "../../../Other/Data/FoodData";
 import OrderSummary from "../OrderSummary/OrderSummary";
 import Products from "../Products/Products";
+import MainContentStyle from "./MainContent.module.css";
 const MainContent = () => {
   return (
     <div>
       <SlideItem />
 
-      <div className="flex flex-row justify-center items-start ">
-        <div>
+      <div
+        className={`flex flex-row justify-center items-start ${MainContentStyle.mainContentWrapper}`}
+      >
+        <div className="flex flex-col justify-center items-center">
           {FoodData.map((category) => (
             <div
               key={category.id}
@@ -23,7 +26,9 @@ const MainContent = () => {
                   {category.Category}
                 </h1>
               </div>
-              <div className="p-5 flex flex-wrap gap-5 items-center">
+              <div
+                className={`p-5 flex flex-wrap gap-5 items-center ${MainContentStyle.foodItemsWrapper}`}
+              >
                 {category.FoodItem.map((item, i) => (
                   <ItemModal
                     key={item.id || i}
@@ -37,7 +42,7 @@ const MainContent = () => {
             </div>
           ))}
         </div>
-        <div className="p-5 sticky top-12 z-50">
+        <div className={`sticky pt-15 ${MainContentStyle.orderSummaryWrapper}`}>
           <OrderSummary />
         </div>
       </div>
