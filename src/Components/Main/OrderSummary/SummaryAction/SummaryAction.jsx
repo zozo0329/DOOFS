@@ -5,7 +5,7 @@ const SummaryAction = () => {
   const cartCtx = useContext(CartContext);
   return (
     <>
-      <div className="flex flex-col gap-5 pt-5">
+      <div className="flex flex-col gap-5 mt-10">
         <div>
           <div className="flex justify-between">
             <p className="text-lg font-bold cursor-default">Total:</p>

@@ -11,14 +11,14 @@ const OrderSummary = () => {
 
   return (
     <div
-      className={`w-140 max-h-125 bg-white text-black card-md flex-col justify-start items-start p-5 gap-5 rounded-2xl shadow-md border border-[#c0c0c0] ${OrderSummaryStyle.orderSummaryContainer}`}
+      className={`w-140 h-full bg-white text-black card-md flex-col justify-start items-start p-5 gap-5 rounded-2xl shadow-md border border-[#c0c0c0] ${OrderSummaryStyle.orderSummaryContainer}`}
     >
       <div className="pb-5">
         <p className="text-xl font-semibold cursor-default">Your items</p>
       </div>
       <div className="flex flex-col gap-2 overflow-y-auto max-h-80">
         {cartItems.length === 0 ? (
-          <div className="flex flex-col justify-center items-center p-10">
+          <div className="flex flex-col justify-center items-center p-5">
             <img
               src="https://png.pngtree.com/png-vector/20220705/ourmid/pngtree-food-logo-png-image_5687686.png"
               alt="Logo"
