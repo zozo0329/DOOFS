@@ -27,7 +27,9 @@ const FooterContent = () => {
         </nav>
       </footer>
       <div className="flex justify-start pt-10">
-        <p>&copy; 2069 Doofs. All rights reserved.</p>
+        <p className="cursor-default selection:bg-yellow-300 selection:text-black">
+          &copy; 2069 Doofs. All rights reserved.
+        </p>
       </div>
     </div>
   );

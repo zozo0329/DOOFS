@@ -4,4 +4,8 @@
 body {
   margin: 0px;
   padding: 0px;
+  ::selection {
+    background-color: #ffb71c; /* highlight background */
+    color: #000000; /* text color when highlighted */
+  }
 }
