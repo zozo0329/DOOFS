@@ -13,14 +13,36 @@ const OrderListActions = ({ item }) => {
   };
   return (
     <div className="flex flex-row items-center gap-2">
-      <Button
+      {/* <Button
         onClick={() => {
           decreaseHandler();
         }}
       >
         {"<"}
-      </Button>
-      <p>{item.amount}</p>
+      </Button> */}
+      {item.amount === 1 ? (
+        <Button
+          onClick={() => {
+            decreaseHandler();
+          }}
+          className="p-0"
+        >
+          <img
+            src="https://img.icons8.com/?size=100&id=nerFBdXcYDve&format=png&color=000000"
+            alt="Trash Icon"
+            className="w-6 h-6 p-0"
+          />
+        </Button>
+      ) : (
+        <Button
+          onClick={() => {
+            decreaseHandler();
+          }}
+        >
+          {"<"}
+        </Button>
+      )}
+      <p className="font-semibold">{item.amount}</p>
       <Button
         onClick={() => {
           increaseHandler();
