@@ -25,7 +25,7 @@ const OrderListActions = ({ item }) => {
           onClick={() => {
             decreaseHandler();
           }}
-          className="p-0"
+          className="pl-3 pr-3"
         >
           <img
             src="https://img.icons8.com/?size=100&id=nerFBdXcYDve&format=png&color=000000"
