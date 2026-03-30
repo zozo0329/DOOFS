@@ -26,7 +26,6 @@ const ProductsAction = ({ name, price, checked, handleSelectAddOn }) => {
                 handleSelectAddOn({ name, price }, e.target.checked);
               }}
               className="form-checkbox h-4 w-4 accent-black"
-              // checked and onChange could be managed via state if needed
             />
           </span>
         </label>
