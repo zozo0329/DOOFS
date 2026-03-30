@@ -19,7 +19,7 @@ const SummaryAction = () => {
             </a>
           </div>
         </div>
-        <Button className="w-full text-[20px] font-bold hover:bg-[#a04800] hover:text-white transition-all duration-350 hover:border-0">
+        <Button className="w-full text-[20px] font-bold hover:bg-primary hover:text-primary-content transition-all duration-350 hover:border-0">
           Order
         </Button>
       </div>

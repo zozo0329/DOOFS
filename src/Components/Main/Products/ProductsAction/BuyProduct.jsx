@@ -10,7 +10,7 @@ const BuyProduct = ({ addToCartHandler, currAmount, setCurrAmount }) => {
 
   return (
     <div
-      className={`flex flex-row items-center justify-between w-full shadow-2xl bg-white p-4 `}
+      className={`flex flex-row items-center justify-between w-full shadow-2xl bg-base-100 p-4 `}
     >
       <div className="flex items-center gap-2">
         <Button onClick={decreaseHandler}>{"<"}</Button>

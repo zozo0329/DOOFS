@@ -3,7 +3,7 @@ import AddIcon from "../../../assets/Images/addICON.png";
 const FoodModal = ({ item }) => {
   return (
     <>
-      <div className="card w-96 bg-white text-black card-md shadow-sm flex-row justify-center items-center p-3 hover:bg-[#e7e7e7] transition-all duration-400 border-2 relative">
+      <div className="card w-96 bg-base-100 text-base-content card-md shadow-sm flex-row justify-center items-center p-3 hover:bg-base-200 transition-all duration-400 border-2 border-base-300 relative">
         <div className="card-body">
           <h2 className="card-title text-start">{item.name}</h2>
           <p className="text-start">{item.description}</p>

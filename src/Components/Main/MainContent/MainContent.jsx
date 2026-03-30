@@ -22,7 +22,7 @@ const MainContent = () => {
               className="flex flex-col gap-4 items-center justify-center pt-10"
             >
               <div>
-                <h1 className="text-5xl font-bold text-[#be4600] cursor-default">
+                <h1 className="text-5xl font-bold text-primary cursor-default">
                   {category.Category}
                 </h1>
               </div>

@@ -16,7 +16,7 @@ const OrderList = ({ name, image, price, addOns, id }) => {
   console.log(item, "ITEEEEEEEEEEM");
   return (
     <div>
-      <div className="w-full bg-white text-black card-md flex flex-col justify-start items-start p-5 gap-2 rounded-2xl shadow-md border border-[#c0c0c0]">
+      <div className="w-full bg-base-100 text-base-content card-md flex flex-col justify-start items-start p-5 gap-2 rounded-2xl shadow-md border border-base-300">
         <OrderListItem name={name} image={image} addOns={addOns} />
         <div className="flex flex-row justify-between items-center w-full">
           <div>

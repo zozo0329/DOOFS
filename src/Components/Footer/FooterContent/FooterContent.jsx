@@ -13,7 +13,7 @@ const FooterContent = () => {
         </nav>
         <nav>
           <h6 className="footer-title">Company</h6>
-          <a className="link link-hover">About us</a>
+          <a className="link link-hover ">About us</a>
           <a className="link link-hover">Contact</a>
           <a className="link link-hover">Jobs</a>
           <a className="link link-hover">Press kit</a>
@@ -27,7 +27,7 @@ const FooterContent = () => {
         </nav>
       </footer>
       <div className="flex justify-start pt-10">
-        <p className="cursor-default selection:bg-yellow-300 selection:text-black">
+        <p className="cursor-default selection:bg-secondary selection:text-secondary-content">
           &copy; 2069 Doofs. All rights reserved.
         </p>
       </div>

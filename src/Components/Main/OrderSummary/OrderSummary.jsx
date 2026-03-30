@@ -11,7 +11,7 @@ const OrderSummary = () => {
 
   return (
     <div
-      className={`w-140 h-full bg-white text-black card-md flex-col justify-start items-start p-5 gap-5 rounded-2xl shadow-md border border-[#c0c0c0] ${OrderSummaryStyle.orderSummaryContainer}`}
+      className={`w-140 h-full bg-base-100 text-base-content card-md flex-col justify-start items-start p-5 gap-5 rounded-2xl shadow-md border border-base-300 ${OrderSummaryStyle.orderSummaryContainer}`}
     >
       <div className="pb-5">
         <p className="text-xl font-semibold cursor-default">Your items</p>

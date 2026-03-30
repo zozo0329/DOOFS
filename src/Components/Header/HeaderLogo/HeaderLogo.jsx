@@ -8,7 +8,7 @@ const HeaderLogo = () => {
         alt="Website Logo"
         className="h-12 cursor-pointer"
       />
-      <h1 className="text-xl text-black font-bold cursor-pointer hover:text-[#494949] transition-all duration-200">
+      <h1 className="text-xl text-base-content font-bold cursor-pointer hover:text-base-300 transition-all duration-200">
         Doofs
       </h1>
     </div>

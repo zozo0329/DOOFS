@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import ReactDOM from "react-dom";
 import xIcon from "../../../../assets/Images/x.png";
 
-const CartModal = ({ children, className, disabled }) => {
+const CartModal = ({ children, className, disabled, content }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const openHandler = () => {
@@ -37,7 +37,7 @@ const CartModal = ({ children, className, disabled }) => {
           {/* DRAWER */}
           <div
             className={`
-              fixed top-0 right-0 h-full w-100 bg-white z-9999
+              fixed top-0 right-0 h-full w-100 bg-base-100 z-9999
               shadow-2xl rounded-l-2xl
               transform transition-transform duration-300 ease-in-out
               ${isOpen ? "translate-x-0" : "translate-x-full"}
@@ -45,13 +45,22 @@ const CartModal = ({ children, className, disabled }) => {
           >
             <div className="p-4">
               <div className="hidden">
-                <button onClick={closeHandler} className="cursor-pointer">
+                <button onClick={closeHandler}>
                   <img src={xIcon} alt="X UI" />
                 </button>
               </div>
 
               <div>
-                <h2 className="text-xl font-bold ">Cart</h2>
+                <div className="flex justify-between items-center">
+                  <h2 className="text-xl font-bold ">Cart</h2>
+                  <button
+                    onClick={closeHandler}
+                    className="cursor-pointer hover:scale-[1.2] transition-all duration-300"
+                  >
+                    <img src={xIcon} alt="X UI" />
+                  </button>
+                </div>
+                {content}
               </div>
             </div>
           </div>
