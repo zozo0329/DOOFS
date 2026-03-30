@@ -12,6 +12,7 @@ function App() {
         <MainContent />
         <FooterMain />
       </CartProvider>
+      {/* TEST */}
     </>
   );
 }
