@@ -39,6 +39,13 @@ const SignUp = () => {
 
       console.log("Sign Up successful:", user);
       alert("Sign Up successful!");
+
+      // Reset the form after successful sign-up
+      setForm({
+        email: "",
+        password: "",
+        confirmPassword: "",
+      });
     },
     [form],
   );
