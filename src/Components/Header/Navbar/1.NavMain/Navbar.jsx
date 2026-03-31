@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
-import Button from "../../UI/Buttons/Button";
-import CartImage from "../../../assets/Images/grocery-store.png";
-import CartButton from "../Navbar/CartButton/CartButton";
-import CartContext from "../../../Other/Store/CartContext";
-import ThemeContext from "../../../Other/Store/ThemeContext";
-import CartModal from "../../UI/Modal/CartModal/CartModal";
+import Button from "../../../UI/Buttons/Button";
+import CartImage from "../../../../assets/Images/grocery-store.png";
+import CartButton from "../CartButton/CartButton";
+import CartContext from "../../../../Other/Store/CartContext";
+import ThemeContext from "../../../../Other/Store/ThemeContext";
+import CartModal from "../../../UI/Modal/CartModal/CartModal";
 const Navbar = () => {
   const cartCtx = useContext(CartContext);
   const { isDarkMode, toggleTheme } = useContext(ThemeContext);

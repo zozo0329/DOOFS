@@ -52,7 +52,7 @@ const CartModal = ({ children, className, disabled, content }) => {
 
               <div>
                 <div className="flex justify-between items-center">
-                  <h2 className="text-xl font-bold ">Cart</h2>
+                  <h2 className="text-xl font-bold ">All Carts</h2>
                   <button
                     onClick={closeHandler}
                     className="cursor-pointer hover:scale-[1.2] transition-all duration-300"

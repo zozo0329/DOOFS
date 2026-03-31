@@ -1,6 +1,6 @@
 import React from "react";
 import HeaderLogo from "../HeaderLogo/HeaderLogo";
-import Navbar from "../Navbar/Navbar";
+import Navbar from "../Navbar/1.NavMain/Navbar";
 
 const HeaderMain = () => {
   return (
