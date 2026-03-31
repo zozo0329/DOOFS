@@ -5,13 +5,14 @@ import CartButton from "../CartButton/CartButton";
 import CartContext from "../../../../Other/Store/CartContext";
 import ThemeContext from "../../../../Other/Store/ThemeContext";
 import CartModal from "../../../UI/Modal/CartModal/CartModal";
+import NavModal from "../../../UI/Modal/NavModal/NavModal";
+import Login from "../Login/Login";
 const Navbar = () => {
   const cartCtx = useContext(CartContext);
   const { isDarkMode, toggleTheme } = useContext(ThemeContext);
   return (
     <>
       <div className="flex justify-items-center items-center gap-6">
-        {/* Theme Toggle Button */}
         <button
           onClick={toggleTheme}
           className="btn btn-ghost btn-circle"
@@ -49,11 +50,14 @@ const Navbar = () => {
             </svg>
           )}
         </button>
-        <Button
-          className={`hover:bg-base-300 transition-all duration-250 hover:scale-105`}
-        >
-          Login
-        </Button>
+        <NavModal content={<Login />}>
+          <Button
+            className={`hover:bg-base-300 transition-all duration-250 hover:scale-105`}
+          >
+            Login
+          </Button>
+        </NavModal>
+
         <Button
           className={`hover:bg-base-300 hover:text-base-content transition-all duration-250 hover:scale-105`}
         >
