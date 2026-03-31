@@ -1,19 +1,22 @@
-import React from "react";
+import React, { useRef } from "react";
 
 const NavModal = ({ children, content, className }) => {
+  const dialogRef = useRef(null);
+
+  const openModal = () => {
+    dialogRef.current.showModal();
+  };
+
   return (
     <>
-      {/* Open the modal using document.getElementById('ID').showModal() method */}
-      <div
-        className={`${className}`}
-        onClick={() => document.getElementById("my_modal_2").showModal()}
-      >
+      <div className={className} onClick={openModal}>
         {children}
       </div>
-      <dialog id="my_modal_2" className="modal">
-        <div className="modal-box">{content}</div>
+
+      <dialog ref={dialogRef} className="modal">
+        <div className="modal-box p-0">{content}</div>
         <form method="dialog" className="modal-backdrop">
-          <button>close</button>
+          <button>Close</button>
         </form>
       </dialog>
     </>

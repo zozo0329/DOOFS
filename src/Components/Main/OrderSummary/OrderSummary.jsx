@@ -7,7 +7,6 @@ import OrderSummaryStyle from "./OrderSummary.module.css";
 const OrderSummary = () => {
   const cartCtx = useContext(CartContext);
   const cartItems = cartCtx.items || [];
-  console.log(cartItems, "CARTITEMS");
 
   return (
     <div

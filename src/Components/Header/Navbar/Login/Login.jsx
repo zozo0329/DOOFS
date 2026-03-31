@@ -1,6 +1,6 @@
 import React, { useState, useCallback } from "react";
+import { signIn } from "../../../../Other/Store/Firebase/firebase-auth";
 
-// Constants for localStorage key and default form state
 const LOGIN_STORAGE_KEY = "loginData";
 const DEFAULT_FORM_STATE = {
   email: "",
@@ -55,9 +55,12 @@ const loadSavedFormData = () => {
 const Login = () => {
   // Use lazy initializer to load saved data only once during initial render
   const [form, setForm] = useState(loadSavedFormData);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState("");
 
   const changeHandler = useCallback((e) => {
     const { name, value, type, checked } = e.target;
+    setError(""); // Clear error when user types
 
     setForm((prev) => ({
       ...prev,
@@ -66,24 +69,43 @@ const Login = () => {
   }, []);
 
   const submitHandler = useCallback(
-    (e) => {
+    async (e) => {
       e.preventDefault();
 
       if (!form.email || !form.password) {
-        alert("Please fill in all fields");
+        setError("Please fill in all fields");
         return;
       }
 
-      console.log("Login Data:", form);
+      setIsLoading(true);
+      setError("");
 
-      // Save if "remember me" is checked
-      if (form.remember) {
-        localStorage.setItem(LOGIN_STORAGE_KEY, JSON.stringify(form));
-      } else {
-        localStorage.removeItem(LOGIN_STORAGE_KEY);
+      try {
+        // Use async/await for cleaner code
+        const { user, error: signInError } = await signIn(
+          form.email,
+          form.password,
+        );
+
+        if (signInError) {
+          setError(signInError);
+          return;
+        }
+
+        console.log("Login successful:", user);
+
+        // Save if "remember me" is checked
+        if (form.remember) {
+          localStorage.setItem(LOGIN_STORAGE_KEY, JSON.stringify(form));
+        } else {
+          localStorage.removeItem(LOGIN_STORAGE_KEY);
+        }
+      } catch (err) {
+        setError("An unexpected error occurred. Please try again.");
+        console.error("Login error:", err);
+      } finally {
+        setIsLoading(false);
       }
-
-      // TODO: connect to backend auth
     },
     [form],
   );
@@ -102,6 +124,13 @@ const Login = () => {
       >
         <h2 className="text-2xl font-bold mb-4 text-center">Login</h2>
 
+        {/* Error Message */}
+        {error && (
+          <div className="mb-3 p-2 bg-red-100 border border-red-400 text-red-700 rounded-lg text-sm">
+            {error}
+          </div>
+        )}
+
         {/* Email */}
         <div className="mb-3">
           <label className="block text-sm mb-1">Email</label>
@@ -112,6 +141,7 @@ const Login = () => {
             onChange={changeHandler}
             className="w-full p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-lime-400"
             placeholder="Enter your email"
+            disabled={isLoading}
           />
         </div>
 
@@ -125,6 +155,7 @@ const Login = () => {
             onChange={changeHandler}
             className="w-full p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-lime-400"
             placeholder="Enter your password"
+            disabled={isLoading}
           />
         </div>
 
@@ -133,7 +164,8 @@ const Login = () => {
           <button
             type="button"
             onClick={forgotPasswordHandler}
-            className="text-sm text-lime-600 hover:underline"
+            className="text-sm text-lime-600 hover:underline disabled:opacity-50"
+            disabled={isLoading}
           >
             Forgot Password?
           </button>
@@ -147,6 +179,7 @@ const Login = () => {
             checked={form.remember}
             onChange={changeHandler}
             className="cursor-pointer"
+            disabled={isLoading}
           />
           <label className="text-sm">Stay logged in</label>
         </div>
@@ -154,9 +187,10 @@ const Login = () => {
         {/* Submit */}
         <button
           type="submit"
-          className="w-full bg-lime-500 hover:bg-lime-600 text-white p-2 rounded-lg transition"
+          className="w-full bg-lime-500 hover:bg-lime-600 text-white p-2 rounded-lg transition disabled:opacity-50 disabled:cursor-not-allowed"
+          disabled={isLoading}
         >
-          Login
+          {isLoading ? "Logging in..." : "Login"}
         </button>
       </form>
     </div>

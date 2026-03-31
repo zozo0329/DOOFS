@@ -7,6 +7,7 @@ import ThemeContext from "../../../../Other/Store/ThemeContext";
 import CartModal from "../../../UI/Modal/CartModal/CartModal";
 import NavModal from "../../../UI/Modal/NavModal/NavModal";
 import Login from "../Login/Login";
+import SignUp from "../Signup/SignUp";
 const Navbar = () => {
   const cartCtx = useContext(CartContext);
   const { isDarkMode, toggleTheme } = useContext(ThemeContext);
@@ -57,12 +58,14 @@ const Navbar = () => {
             Login
           </Button>
         </NavModal>
+        <NavModal content={<SignUp />}>
+          <Button
+            className={`hover:bg-base-300 hover:text-base-content transition-all duration-250 hover:scale-105`}
+          >
+            Sign Up For Free Delivery
+          </Button>
+        </NavModal>
 
-        <Button
-          className={`hover:bg-base-300 hover:text-base-content transition-all duration-250 hover:scale-105`}
-        >
-          Sign Up For Free Delivery
-        </Button>
         <CartModal
           className={`btn p-3 flex items-center gap-1 rounded-[25px] text-md border w-12
       transition-all duration-200

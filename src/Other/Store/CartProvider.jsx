@@ -3,7 +3,6 @@ import CartContext from "./CartContext";
 
 const initialState = { items: [], totalAmount: 0 };
 const cartReducer = (state, action) => {
-  console.log(action, "ACTION");
   switch (action.type) {
     case "ADD_ITEM": {
       const addonsTotal = action.item.addOns
@@ -81,8 +80,6 @@ const CartProvider = ({ children }) => {
     addItem: addHandler,
     removeItem: removeHandler,
   };
-  console.log(contextValue.items, "ITEMS");
-
   return (
     <CartContext.Provider value={contextValue}>{children}</CartContext.Provider>
   );
