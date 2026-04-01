@@ -8,7 +8,6 @@ const DEFAULT_FORM_STATE = {
   remember: false,
 };
 
-// Helper function to safely parse JSON with error handling
 const safelyParseJSON = (jsonString) => {
   try {
     return JSON.parse(jsonString);

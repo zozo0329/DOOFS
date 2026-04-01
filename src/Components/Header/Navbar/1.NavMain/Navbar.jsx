@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Button from "../../../UI/Buttons/Button";
 import CartImage from "../../../../assets/Images/grocery-store.png";
 import CartButton from "../CartButton/CartButton";
@@ -8,9 +8,30 @@ import CartModal from "../../../UI/Modal/CartModal/CartModal";
 import NavModal from "../../../UI/Modal/NavModal/NavModal";
 import Login from "../Login/Login";
 import SignUp from "../Signup/SignUp";
+import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
 const Navbar = () => {
   const cartCtx = useContext(CartContext);
   const { isDarkMode, toggleTheme } = useContext(ThemeContext);
+
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(getAuth(), (currentUser) => {
+      setUser(currentUser);
+    });
+
+    return () => unsubscribe();
+  }, []);
+  const logoutHandler = async () => {
+    const auth = getAuth();
+    try {
+      await signOut(auth);
+      console.log("Logged out!");
+    } catch (error) {
+      console.error("Logout error:", error);
+    }
+  };
+
   return (
     <>
       <div className="flex justify-items-center items-center gap-6">
@@ -51,20 +72,25 @@ const Navbar = () => {
             </svg>
           )}
         </button>
-        <NavModal content={<Login />}>
-          <Button
-            className={`hover:bg-base-300 transition-all duration-250 hover:scale-105`}
-          >
-            Login
-          </Button>
-        </NavModal>
-        <NavModal content={<SignUp />}>
-          <Button
-            className={`hover:bg-base-300 hover:text-base-content transition-all duration-250 hover:scale-105`}
-          >
-            Sign Up For Free Delivery
-          </Button>
-        </NavModal>
+        {user && <Button onClick={logoutHandler}>LOGOUT</Button>}
+        {!user && (
+          <NavModal content={<Login />}>
+            <Button
+              className={`hover:bg-base-300 transition-all duration-250 hover:scale-105`}
+            >
+              Login
+            </Button>
+          </NavModal>
+        )}
+        {!user && (
+          <NavModal content={<SignUp />}>
+            <Button
+              className={`hover:bg-base-300 hover:text-base-content transition-all duration-250 hover:scale-105`}
+            >
+              Sign Up For Free Delivery
+            </Button>
+          </NavModal>
+        )}
 
         <CartModal
           className={`btn p-3 flex items-center gap-1 rounded-[25px] text-md border w-12

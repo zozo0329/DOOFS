@@ -1,5 +1,6 @@
 import React, { useState, useCallback } from "react";
 import { signUp } from "../../../../Other/Store/Firebase/firebase-auth";
+import { saveUserToDatabase } from "../../../../Other/Store/Firebase/firebase-database";
 const SignUp = () => {
   const [form, setForm] = useState({
     email: "",
@@ -20,23 +21,32 @@ const SignUp = () => {
       e.preventDefault();
 
       if (!form.email || !form.password || !form.confirmPassword) {
-        alert("Please fill in all fields");
         return;
       }
 
       if (form.password !== form.confirmPassword) {
-        alert("Passwords do not match");
         return;
       }
 
       // Call the signUp function from firebase-auth
       const { user, error } = await signUp(form.email, form.password);
 
+      // Check for error FIRST before accessing user properties
       if (error) {
-        alert(error);
+        console.log(error);
         return;
       }
 
+      // Save user data to Realtime Database
+      console.log("Calling saveUserToDatabase with user:", user);
+
+      const dbResult = await saveUserToDatabase(user);
+      console.log("Database save result:", dbResult);
+
+      if (!dbResult.success) {
+        alert("Failed to save user data: " + dbResult.error);
+        return;
+      }
       console.log("Sign Up successful:", user);
       alert("Sign Up successful!");
 
