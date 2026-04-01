@@ -126,7 +126,7 @@ const Login = () => {
         {/* Error Message */}
         {error && (
           <div className="mb-3 p-2 bg-red-100 border border-red-400 text-red-700 rounded-lg text-sm">
-            {error}
+            <p>There's something wrong with your Password/Email</p>
           </div>
         )}
 

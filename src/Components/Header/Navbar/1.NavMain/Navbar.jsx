@@ -72,7 +72,14 @@ const Navbar = () => {
             </svg>
           )}
         </button>
-        {user && <Button onClick={logoutHandler}>LOGOUT</Button>}
+        {user && (
+          <Button
+            onClick={logoutHandler}
+            className={`hover:bg-base-300 transition-all duration-250 hover:scale-105`}
+          >
+            LOGOUT
+          </Button>
+        )}
         {!user && (
           <NavModal content={<Login />}>
             <Button
